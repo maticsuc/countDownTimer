@@ -22,7 +22,6 @@ var x = setInterval(function() {
     document.getElementById("secondsBarP").style.width = "" + s1 / 0.6 + "vw";
     document.getElementById("minutesBarP").style.width = "" + m1 / 0.6 + "vw";
     document.getElementById("hoursBarP").style.width = "" + h1 / 0.08 + "vw";
-    
 
     if (h > 0){
     document.getElementById("timeLeft").innerHTML = h + ":" + addZero(m) + ":" + addZero(s);
@@ -36,6 +35,7 @@ var x = setInterval(function() {
     else{
     document.getElementById("timePassed").innerHTML = addZero(m1) + ":" + addZero(s1);
     }
+    
 }, 1000);
 
 var y = setInterval(function() {
@@ -64,6 +64,7 @@ var getJSON = function(url, callback) {
     };
     xhr.send();
 };
+
 function addZero(n){
     if (n < 10){
     return "0" + n.toString();
