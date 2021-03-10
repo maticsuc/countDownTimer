@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CountDown</title>
+  <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/1993/PNG/512/clock_hour_minute_second_time_timer_watch_icon_123193.png"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="onLoad()">
+
+  <script src="script.js"></script>
+
+  <p id="todaysDate" class="center" style="margin-bottom: -5px; font-size: 20px;"></p>
+  <p id="arrivalDeparture" class="center" style="margin-bottom: -5px; font-size: 16px;"></p>
+  <br>
+
+  <p class="center" style="margin-bottom: -5px; font-size: 20px;">Remaining</p>
+  <p id="timeLeft" class="clock"></p>
+
+  <div id="secondsBarL" class="barL"></div>
+  <br>
+  <div id="minutesBarL" class="barL"></div>
+  <br>
+  <div id="hoursBarL" class="barL"></div>
+  <br>
+
+  <p class="center" style="margin-bottom: -5px; font-size: 20px;">Done</p>
+  <p id="timePassed" class="clock"></p>
+
+  <div id="secondsBarP" class="barP"></div>
+  <br>
+  <div id="minutesBarP" class="barP"></div>
+  <br>
+  <div id="hoursBarP" class="barP"></div>
+  <br>
+  
+  <p class="center" style="margin-bottom: -5px; font-size: 25px;">Bus</p>
+  <p class="center" style="margin-bottom: -5px; font-size: 15px;">Linija 01<br>Cesta v Gorice</p>
+  <p id="bus" class="center" style="margin-bottom: -5px; font-size: 15px;"></p>
+  
+  <br>
+  <p class="center" style="margin-bottom: -5px; font-size: 15px;">Arrival at work</p>
+  <div id="arrivalInput" class="center">
+    <input type="time" id="arrival" name="appt" min="06:00" max="10:00" required onchange="getArrival()">
+  </div>
+  <br>
+
+  <div class="footer">
+    <p>Matic Šuc</p>
+  </div>
+
+</body>
+</html>
