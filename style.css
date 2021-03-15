@@ -35,6 +35,9 @@ body{
     color: #f2f2f2;
     text-align: center;
 }
+#workingHours{
+    background-color: #3b945e;
+}
 #secondsBarL{
     background-color: #65ccb8;
 }
@@ -55,4 +58,10 @@ body{
 }
 input[type=time] {
     background-color: #3b945e;
+}
+@media (max-height: 900px){
+    .footer { 
+        display : none; 
+        visibility : hidden; 
+    }
 }

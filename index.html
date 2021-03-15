@@ -13,26 +13,29 @@
   <p id="todaysDate" class="center" style="margin-bottom: -5px; font-size: 20px;"></p>
   <p id="arrivalDeparture" class="center" style="margin-bottom: -5px; font-size: 16px;"></p>
   <br>
+  <div id="remainingContainer">
+      <p class="center" style="margin-bottom: -5px; font-size: 20px;">Remaining</p>
+      <p id="timeLeft" class="clock"></p>
+    
+      <div id="secondsBarL" class="barL"></div>
+      <br>
+      <div id="minutesBarL" class="barL"></div>
+      <br>
+      <div id="hoursBarL" class="barL"></div>
+      <br>
+  </div>
 
-  <p class="center" style="margin-bottom: -5px; font-size: 20px;">Remaining</p>
-  <p id="timeLeft" class="clock"></p>
-
-  <div id="secondsBarL" class="barL"></div>
-  <br>
-  <div id="minutesBarL" class="barL"></div>
-  <br>
-  <div id="hoursBarL" class="barL"></div>
-  <br>
-
-  <p class="center" style="margin-bottom: -5px; font-size: 20px;">Done</p>
-  <p id="timePassed" class="clock"></p>
-
-  <div id="secondsBarP" class="barP"></div>
-  <br>
-  <div id="minutesBarP" class="barP"></div>
-  <br>
-  <div id="hoursBarP" class="barP"></div>
-  <br>
+  <div id="passedContainer">
+    <p class="center" style="margin-bottom: -5px; font-size: 20px;">Done</p>
+    <p id="timePassed" class="clock"></p>
+  
+    <div id="secondsBarP" class="barP"></div>
+    <br>
+    <div id="minutesBarP" class="barP"></div>
+    <br>
+    <div id="hoursBarP" class="barP"></div>
+    <br>
+  </div>
   
   <p class="center" style="margin-bottom: -5px; font-size: 25px;">Bus</p>
   <p class="center" style="margin-bottom: -5px; font-size: 15px;">Linija 01<br>Cesta v Gorice</p>
@@ -41,7 +44,21 @@
   <br>
   <p class="center" style="margin-bottom: -5px; font-size: 15px;">Arrival at work</p>
   <div id="arrivalInput" class="center">
-    <input type="time" id="arrival" name="appt" min="06:00" max="10:00" required onchange="getArrival()">
+    <input type="time" id="arrival" name="appt" min="06:00" max="10:00" required onchange="setArrival()">
+  </div>
+  <br>
+
+  <p class="center" style="margin-bottom: -5px; font-size: 15px;">Work time</p>
+  <div id="workingHoursInput" class="center">
+    <select id="workingHours" onchange="setWorkingHours()">
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8" selected>8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
   </div>
   <br>
 
