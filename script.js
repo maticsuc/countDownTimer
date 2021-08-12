@@ -2,6 +2,7 @@ var now = new Date();
 var konec = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 16, 0, 0);
 var arrival = new Date();
 var wHours = 8;
+var hRate = 7;
 
 var x = setInterval(function() {
 
@@ -37,6 +38,8 @@ var x = setInterval(function() {
         document.getElementById("timePassed").innerHTML = h1 + ":" + addZero(m1) + ":" + addZero(s1);
     else
         document.getElementById("timePassed").innerHTML = addZero(m1) + ":" + addZero(s1);
+    
+    document.getElementById("moneyEarned").innerHTML = (Math.round((h1 * hRate + m1/60 * hRate + s1/3600 * hRate) * 100) / 100) +  "€";
     
 }, 1000);
 
@@ -105,6 +108,10 @@ var getBusTimes = setInterval(function() {
 function setWorkingHours(){
     wHours = document.getElementById("workingHours").value;
     setArrival();
+}
+
+function setHourlyRate(){
+    hRate = document.getElementById("hourlyRate").value;
 }
 
 function onLoad(){
